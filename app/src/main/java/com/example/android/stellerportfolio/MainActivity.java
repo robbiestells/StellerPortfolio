@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import static android.R.attr.duration;
@@ -15,30 +16,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    Context context = getApplicationContext();
-    private String toastText = "This button will launch my ";
 
-    public void movies_clicked(View view) {
-        Toast.makeText(context, toastText + getString(R.string.movies) + " app", Toast.LENGTH_SHORT).show();
-    }
+    private String toastText = getString(R.string.toastText);
 
-    public void stocks_clicked(View view) {
-        Toast.makeText(context, toastText + getString(R.string.stock) + " app", Toast.LENGTH_SHORT).show();
-    }
-
-    public void build_clicked(View view) {
-        Toast.makeText(context, toastText + getString(R.string.build) + " app", Toast.LENGTH_SHORT).show();
-    }
-
-    public void make_clicked(View view) {
-        Toast.makeText(context, toastText + getString(R.string.make) + " app", Toast.LENGTH_SHORT).show();
-    }
-
-    public void go_clicked(View view) {
-        Toast.makeText(context, toastText + getString(R.string.go) + " app", Toast.LENGTH_SHORT).show();
-    }
-
-    public void capstone_clicked(View view) {
-        Toast.makeText(context, toastText + getString(R.string.capstone) + " app", Toast.LENGTH_SHORT).show();
+    public void button_clicked(View view) {
+        String appName;
+        switch (view.getId()){
+            case R.id.moviesButton:
+                appName = getString(R.string.movies);
+                break;
+            case R.id.stockButton:
+                appName = getString(R.string.stock);
+                break;
+            case R.id.buildButton:
+                appName = getString(R.string.build);
+                break;
+            case R.id.makeButton:
+                appName = getString(R.string.make);
+                break;
+            case R.id.goButton:
+                appName = getString(R.string.go);
+                break;
+            default:
+                appName = getString(R.string.capstone);
+        }
+        Toast.makeText(getApplicationContext(), toastText + appName + " app", Toast.LENGTH_SHORT).show();
     }
 }

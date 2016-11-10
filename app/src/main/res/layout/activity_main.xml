@@ -8,76 +8,89 @@
     android:background="@color/colorPrimary"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.android.stellerportfolio.MainActivity">
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/header"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/moviesButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/movies"
-            android:textAllCaps="true"
-            android:onClick="movies_clicked"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/header"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/stockButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/stock"
-            android:textAllCaps="true"
-            android:onClick="stocks_clicked"/>
+            <Button
+                android:id="@+id/moviesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:width="200dp"
+                android:onClick="button_clicked"
+                android:text="@string/movies"
+                android:textAllCaps="true" />
 
-        <Button
-            android:id="@+id/buildButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/build"
-            android:textAllCaps="true"
-            android:onClick="build_clicked"/>
+            <Button
+                android:id="@+id/stockButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:width="200dp"
+                android:onClick="button_clicked"
+                android:text="@string/stock"
+                android:textAllCaps="true" />
 
-        <Button
-            android:id="@+id/makeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/make"
-            android:textAllCaps="true"
-            android:onClick="make_clicked"/>
+            <Button
+                android:id="@+id/buildButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:width="200dp"
+                android:onClick="button_clicked"
+                android:text="@string/build"
+                android:textAllCaps="true" />
 
-        <Button
-            android:id="@+id/goButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/go"
-            android:textAllCaps="true"
-            android:onClick="go_clicked"/>
+            <Button
+                android:id="@+id/makeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:width="200dp"
+                android:onClick="button_clicked"
+                android:text="@string/make"
+                android:textAllCaps="true" />
 
-        <Button
-            android:id="@+id/capstoneButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/capstone"
-            android:textAllCaps="true"
-            android:onClick="capstone_clicked"/>
+            <Button
+                android:id="@+id/goButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:width="200dp"
+                android:onClick="button_clicked"
+                android:text="@string/go"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/capstoneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:width="200dp"
+                android:background="@android:color/holo_red_dark"
+                android:onClick="button_clicked"
+                android:text="@string/capstone"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
